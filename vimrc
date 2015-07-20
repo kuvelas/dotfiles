@@ -15,7 +15,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'xsbeats/vim-blade'
 
-Plugin 'pangloss/vim-javascript'
+"Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
 
 Plugin 'scrooloose/nerdtree'
 
@@ -59,3 +60,4 @@ set mouse=a
 " " Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
 set ttymouse=xterm2
 
+set term=screen-256color
