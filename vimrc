@@ -11,17 +11,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'xsbeats/vim-blade'
 Plugin 'pangloss/vim-javascript'
-"Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
-
-"Plugin 'Raimondi/delimitMate'
-Plugin 'jiangmiao/auto-pairs' "delimitMate alt
-
-
-
-
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'mbbill/undotree'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/syntastic'
@@ -37,20 +30,14 @@ Plugin 'quramy/tsuquyomi'
 Plugin 'Shougo/vimproc'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'Quramy/vim-js-pretty-template'
-
-
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-
-" Optional:
 Plugin 'honza/vim-snippets'
-
-" All of your Plugins must be added before the following line
+" All plugins must be added before the following line
 call vundle#end()            " required
 
 syntax on
-
 
 " Brief help
 " :PluginList       - lists configured plugins
@@ -73,7 +60,7 @@ let g:tern_map_keys=1
 "autocmd FileType typescript JsPreTmpl html
 "autocmd FileType typescript syn clear foldBraces
 
-set ts=4 sts=0 sw=4 noexpandtab " default settings"
+set ts=2 sts=0 sw=2 noexpandtab
 set number
 nmap <leader>l :set list!<CR>
 
@@ -91,7 +78,6 @@ set term=screen-256color
 
 
 nnoremap <F6> :UndotreeToggle<CR>
-"nnoremap <F7> :GundoToggle<CR>
 nnoremap <F8> :SyntasticToggleMode<CR>
 nnoremap <F9> :IndentGuidesToggle<CR>
 nnoremap <F12> :CtrlP .<CR>
@@ -112,12 +98,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_typescript_tsc_args = "-t ES5 -m commonjs --experimentalDecorators --emitDecoratorMetadata --sourceMap true --moduleResolution node"
 
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
-let g:typescript_indent_disable = 1
+"let g:typescript_indent_disable = 1
 
 let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi'] 
