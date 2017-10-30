@@ -1,12 +1,11 @@
 set nocompatible              " be iMproved, required
-"filetype off                  " required
-filetype plugin indent on                  " required
+"filetype off
+filetype plugin indent on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'xsbeats/vim-blade'
@@ -15,7 +14,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'mbbill/undotree'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
@@ -34,8 +32,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
-" All plugins must be added before the following line
-call vundle#end()            " required
+
+call vundle#end()
 
 syntax on
 
@@ -76,8 +74,6 @@ set ttymouse=xterm2
 
 set term=screen-256color
 
-
-nnoremap <F6> :UndotreeToggle<CR>
 nnoremap <F8> :SyntasticToggleMode<CR>
 nnoremap <F9> :IndentGuidesToggle<CR>
 nnoremap <F12> :CtrlP .<CR>
@@ -136,3 +132,5 @@ set dir=~/tmpvim
 :command Wq wq
 :command WQ wq
 :command Qa qa
+:command WQa wqa
+:command Wqa wqa
