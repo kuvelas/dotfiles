@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
- 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export ANDROID_HOME=/home/mike/android_sdk
+
+
 alias vim='vim -p'
 
 # Path to your oh-my-zsh installation.
@@ -118,3 +121,9 @@ bindkey -v
 	}
 
 	alias cd="c"
+
+###-tns-completion-start-###
+if [ -f /home/mike/.tnsrc ]; then 
+    source /home/mike/.tnsrc 
+fi
+###-tns-completion-end-###
