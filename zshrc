@@ -1,12 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-export ANDROID_HOME=/home/mike/android_sdk
+export ANDROID_HOME=$HOME/android_sdk
 
 
 alias vim='vim -p'
 
-export ZSH=/home/mike/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="af-magic"
 #ZSH_THEME="robbyrussell"
@@ -49,7 +49,7 @@ bindkey -v
 
 
 ###-tns-completion-start-###
-if [ -f /home/mike/.tnsrc ]; then 
-    source /home/mike/.tnsrc 
+if [ -f $HOME/.tnsrc ]; then 
+    source $HOME/.tnsrc 
 fi
 ###-tns-completion-end-###
