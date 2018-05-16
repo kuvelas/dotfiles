@@ -135,3 +135,4 @@ set dir=~/tmpvim
 :command Qa qa
 :command WQa wqa
 :command Wqa wqa
+:colorscheme gruvbox
