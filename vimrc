@@ -8,30 +8,18 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'xsbeats/vim-blade'
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
-"Plugin 'edkolev/tmuxline.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'quramy/tsuquyomi'
-"Plugin 'Shougo/vimproc'
-"Plugin 'marijnh/tern_for_vim'
-"Plugin 'Quramy/vim-js-pretty-template'
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'garbas/vim-snipmate'
-"Plugin 'honza/vim-snippets'
-
 Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
@@ -56,23 +44,13 @@ set undoreload=10000
 let g:tern_show_argument_hints='on_hold'
 let g:tern_map_keys=1
 
-"autocmd FileType typescript JsPreTmpl html
-"autocmd FileType typescript syn clear foldBraces
-
 set ts=2 sts=0 sw=2 noexpandtab
 set number
 nmap <leader>l :set list!<CR>
 
-" Send more characters for redraws
 set ttyfast
-"
-" " Enable mouse use in all modes
 set mouse=a
-"
-" " Set this to the name of your terminal that supports mouse codes.
-" " Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
 set ttymouse=xterm2
-
 set term=screen-256color
 
 nnoremap <F8> :SyntasticToggleMode<CR>
