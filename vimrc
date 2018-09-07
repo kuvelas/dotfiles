@@ -106,7 +106,6 @@ imap <esc>OF <end>
 set swapfile
 set dir=~/tmpvim
 
-:command qw w
 :command W w
 :command Q q
 :command Wq wq
