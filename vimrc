@@ -96,12 +96,18 @@ set guitablabel=\[%N\]\ %t\ %M
 
 au BufRead,BufNewFile *.ts  setlocal filetype=typescript
 
-map <esc>OH <home>
-cmap <esc>OH <home>
-imap <esc>OH <home>
-map <esc>OF <end>
-cmap <esc>OF <end>
-imap <esc>OF <end>
+no <down> ddp
+no <left> <Nop>
+no <right> <Nop>
+no <up> ddkP
+
+
+"auto center
+nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap } }zz
+nmap { {zz
 
 set swapfile
 set dir=~/tmpvim
@@ -113,4 +119,4 @@ set dir=~/tmpvim
 :command Qa qa
 :command WQa wqa
 :command Wqa wqa
-:colorscheme gruvbox
+:colorscheme cobalt2
