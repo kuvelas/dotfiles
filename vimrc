@@ -10,7 +10,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
@@ -20,6 +19,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'quramy/tsuquyomi'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
@@ -85,12 +85,16 @@ let g:syntastic_typescript_checkers = ['tsuquyomi']
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
 set background=dark
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
 
 set guitablabel=\[%N\]\ %t\ %M 
 
@@ -108,6 +112,15 @@ nmap n nzz
 nmap N Nzz
 nmap } }zz
 nmap { {zz
+
+"fix typos
+iabbr ture true
+iabbr flase false
+
+"shady -- this is not right
+"set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~
+"set list
+
 
 set swapfile
 set dir=~/tmpvim
