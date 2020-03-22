@@ -13,6 +13,8 @@ export NVM_DIR="$HOME/.nvm"
 
 alias vim='vim -p'
 
+eval $(thefuck --alias)
+
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="af-magic"

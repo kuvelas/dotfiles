@@ -18,7 +18,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'quramy/tsuquyomi'
+"Plugin 'quramy/tsuquyomi'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'Valloric/YouCompleteMe'
 
