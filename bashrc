@@ -13,3 +13,4 @@ if [ -f /home/mike/.tnsrc ]; then
     source /home/mike/.tnsrc 
 fi
 ###-tns-completion-end-###
+HISTTIMEFORMAT="%d/%m/%y %T "
