@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export ANDROID_HOME=$HOME/android_sdk/
-export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+#export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 export PATH="${PATH}:${ANDROID_HOME}tools/:${ANDROID_HOME}platform-tools/"
 
 export NVM_DIR="$HOME/.nvm"
@@ -36,7 +36,6 @@ plugins=(
   git
 	git-flow
 	jsontools
-	vim
 )
 
 export PROMPT='%m%#'
