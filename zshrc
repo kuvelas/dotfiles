@@ -9,9 +9,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-(fortune |  cowsay -f tux) 2>/dev/null
+#(fortune |  cowsay -f tux) 2>/dev/null
 
 alias vim='vim -p'
+#alias dbeaver='~/build/dbeaver/product/standalone/target/products/org.jkiss.dbeaver.core.product/linux/gtk/x86_64/dbeaver/dbeaver'
 
 eval $(thefuck --alias)
 

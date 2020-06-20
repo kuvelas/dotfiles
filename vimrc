@@ -9,31 +9,53 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'flazz/vim-colorschemes'
+"Plugin 'flazz/vim-colorschemes'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'leafgarland/typescript-vim'
-"Plugin 'quramy/tsuquyomi'
-Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'quramy/tsuquyomi'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'stanangeloff/php.vim'
+Plugin 'krasjet/auto.pairs'
+Plugin 'matchit.zip'
+Plugin 'alvan/vim-closetag'
+Plugin 'roxma/vim-paste-easy'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'morhetz/gruvbox'
+
+
+" Airline
+let g:airline_theme='luna'
+let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1 
+let g:airline#extensions#tabline#show_splits = 1 
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
+let g:airline_powerline_fonts = 1
+
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_filetypes = 'html,xhtml,phtml'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+
+
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 call vundle#end()
 
 syntax on
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 set undofile
 set undodir=~/.vim/undo
@@ -44,7 +66,8 @@ set undoreload=10000
 let g:tern_show_argument_hints='on_hold'
 let g:tern_map_keys=1
 
-set ts=2 sts=0 sw=2 noexpandtab
+set ts=2 sts=2 sw=2 expandtab
+"set ts=2 sts=0 sw=2 noexpandtab
 set number
 nmap <leader>l :set list!<CR>
 
@@ -54,14 +77,11 @@ set ttymouse=xterm2
 set term=screen-256color
 
 nnoremap <F8> :SyntasticToggleMode<CR>
-nnoremap <F9> :IndentGuidesToggle<CR>
 nnoremap <F12> :CtrlP .<CR>
 
 vmap \ :!xclip -f -sel clip<CR>
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+
 set laststatus=2
 set ttimeoutlen=50
 
@@ -117,11 +137,6 @@ nmap { {zz
 iabbr ture true
 iabbr flase false
 
-"shady -- this is not right
-"set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~
-"set list
-
-
 set swapfile
 set dir=~/tmpvim
 
@@ -132,4 +147,10 @@ set dir=~/tmpvim
 :command Qa qa
 :command WQa wqa
 :command Wqa wqa
-:colorscheme cobalt2
+":colorscheme monokai
+"
+
+
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_number_column = 'bg1'
+:colorscheme gruvbox
