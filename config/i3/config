@@ -23,7 +23,8 @@ font xft:URWGothic-Book 11
 
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec "urxvt -pixmap $HOME'/.config/images/term-background.png;style=centered'"
 #bindsym $mod+Return exec i3-sensible-terminal
 
 # Window kill command

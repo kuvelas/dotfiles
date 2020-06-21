@@ -210,5 +210,5 @@ margin-bottom = 0
 
 [module/quicklaunch]
 type = custom/text
-content = " π  "
-click-left = python3 /home/mike/build/quick_launch/test.py
+content = " sc-api "
+click-left = urxvt -pixmap "$HOME/.config/images/stevens.png;style=centered" -e zsh -c $HOME/git/stevens-environment-files/SC-API/devSc &

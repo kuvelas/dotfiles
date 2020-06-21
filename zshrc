@@ -11,16 +11,14 @@ export NVM_DIR="$HOME/.nvm"
 
 #(fortune |  cowsay -f tux) 2>/dev/null
 
-alias vim='vim -p'
 #alias dbeaver='~/build/dbeaver/product/standalone/target/products/org.jkiss.dbeaver.core.product/linux/gtk/x86_64/dbeaver/dbeaver'
 
 eval $(thefuck --alias)
 
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="af-magic"
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="agnoster"
+#ZSH_THEME="af-magic"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -39,7 +37,7 @@ plugins=(
 )
 
 export PROMPT='%m%#'
-export RPROMPT='%*'
+#export RPROMPT='%*'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,7 +45,9 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 
 # Aliases
+alias vim='vim -p'
 alias v="vim -p"
+alias tmux="tmux -2"
 
 bindkey -v
 
@@ -66,27 +66,6 @@ if [ -f $HOME/.tnsrc ]; then
     source $HOME/.tnsrc 
 fi
 ###-tns-completion-end-###
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/mike/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/mike/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/mike/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/mike/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /home/mike/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/mike/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
-
-###-tns-completion-start-###
-if [ -f /home/mike/.tnsrc ]; then 
-    source /home/mike/.tnsrc 
-fi
-###-tns-completion-end-###
-
-
-
-
-
 
 
 # read .nvmrc and run nvm use if found
